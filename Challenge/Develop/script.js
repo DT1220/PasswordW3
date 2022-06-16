@@ -9,7 +9,7 @@ var uppercaseCheck;
 var numberCheck;
 var specialCheck;
 
-//Function used to determine the length of the password
+//Length of Password
 function determineLength(){
   passwordLength = prompt("How many characters would you like your password to be? (8-128 characters): ");
 
@@ -28,12 +28,57 @@ function determineLength(){
     return passwordLength;
 }
 
+ // all the input from the previous functions and generate password with a random number generator and Using charAt method 
+function generatePassword(){
+  determineLength();
+  console.log(passwordLength);
+  determineUppercase();
+  console.log(uppercaseCheck);
+  determineNumbers();
+  console.log(numberCheck);
+  determineSpecial();
+  console.log(specialCheck);
+
+var characters = lowercaseChar;
+var password = "";
+if (uppercaseCheck && numberCheck && specialCheck){
+  characters += uppercaseChar + numberChar + specialChar;
+
+}else if (uppercaseCheck && numberCheck){
+  characters += uppercaseChar + numberChar;
+
+}else if (numberCheck && specialCheck){
+  characters += numberChar + specialChar;
+
+}else if (uppercaseCheck && specialCheck){
+  characters += uppercaseChar + specialChar;
+
+}else if (uppercaseCheck){
+  characters += uppercaseChar;
+
+}else if(numberCheck){
+  characters += numberChar;
+
+}else if (specialCheck){
+  characters += specialChar;
+
+}else{
+  characters === lowercaseChar;
+}
+
+  for(var i = 0; i < passwordLength; i++){
+    password += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return password;
+}
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password2 = ""
+  var password2 = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password2;
 
 }
 
