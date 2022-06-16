@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../../Downloads/SMU-VIRT-BO-FSF-PT-05-2022-U-B-main/01-Class-Content/04-Web-APIs"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
