@@ -27,6 +27,76 @@ function determineLength(){
     }
     return passwordLength;
 }
+//Determine whether the user wants to have uppercase letters in the password or not
+function determineUppercase(){
+  uppercaseCheck = prompt("Do you want to have uppercase letters in your password? \n(Yes or No?)");
+    uppercaseCheck = uppercaseCheck.toLowerCase();
+
+    if (uppercaseCheck === null || uppercaseCheck === ""){
+      alert("Yes or No?");
+      determineUppercase();
+
+    }else if (uppercaseCheck === "yes" || uppercaseCheck ==="y"){
+      uppercaseCheck = true;
+      return uppercaseCheck;
+
+    }else if (uppercaseCheck === "no" || uppercaseCheck ==="n"){
+      uppercaseCheck = false;
+      return uppercaseCheck;
+    
+    }else {
+      alert("Yes or No?");
+      determineUppercase();
+    }
+    return uppercaseCheck;
+}
+// Determine whether the user wants to have numbers in the password or not
+function determineNumbers(){
+  numberCheck = prompt("Do you want to have numbers in your password? \n(Yes or No?)");
+    numberCheck = numberCheck.toLowerCase();
+
+    if (numberCheck === null || numberCheck === ""){
+      alert("Yes or No?");
+      determineNumbers();
+
+    }else if (numberCheck === "yes" || numberCheck ==="y"){
+      numberCheck = true;
+      return numberCheck;
+
+    }else if (numberCheck === "no" || numberCheck ==="n"){
+      numberCheck = false;
+      return numberCheck;
+    
+    }else {
+      alert("Yes or No?");
+      determineNumbers();
+    }
+    return numberCheck;
+}
+
+//Determine whether the user wants to have special characters or not when generating the password
+function determineSpecial(){
+  specialCheck = prompt("Do you want to have special characters in your password? \n(Yes or No?)");
+    specialCheck = specialCheck.toLowerCase();
+
+    if (specialCheck === null || specialCheck === ""){
+      alert("Yes or No?");
+      determineSpecial();
+
+    }else if (specialCheck === "yes" || specialCheck ==="y"){
+      specialCheck = true;
+      return specialCheck;
+
+    }else if (specialCheck === "no" || specialCheck ==="n"){
+      specialCheck = false;
+      return specialCheck;
+    
+    }else {
+      alert("Yes or No?");
+      determineSpecial();
+    }
+    return specialCheck;
+}
 
  // all the input from the previous functions and generate password with a random number generator and Using charAt method 
 function generatePassword(){
